@@ -137,30 +137,3 @@ if __name__ == '__main__':
 
     s.transform(transformation)
     s.save_file(args.output)
-
-'''
-shift and stretch a srt using a linear transform
-
-examples:
-
-- delay subtitles of 1 second:
-
-srt-transform.py \\
-    --start-wrong 00:00:00,000 --start-right 00:00:01,000 \\
-    --end-wrong 00:00:10,000 --end-right 00:00:11,000 \\
-    input.srt output.srt
-
-- strech subtitle of 1 minute:
-
-		srt-shift -i <infile> -o <outfile> \\
-			-s 00:00:00,000 -S 00:00:00,000 \\
-			-e 01:56:00,000 -E 01:57:00,000
-
-	delay and stretch (complex usage):
-
-		srt-shift -i <infile> -o <outfile> \\
-			-s 00:00:01,840 -S 00:00:08,120 \\
-			-e 01:56:33,000 -E 01:51:55,270
-
-ver: $VERSION
-'''
