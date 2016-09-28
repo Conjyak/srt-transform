@@ -26,7 +26,7 @@ Jan, vecchio mio, mi senti?
 00:03:27,770 --> 00:03:29,726
 <i>Forte e chiaro, ragazzo. Che c'è?</i>
 
-......
+....
 
 1129
 01:55:32,458 --> 01:55:34,574
