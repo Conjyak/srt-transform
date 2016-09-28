@@ -1,6 +1,6 @@
 # srt-transform
 
-Shift and stretch an `srt` subtitle file using a linear transform.
+Shift and stretch a '.srt' subtitle file using a linear transform.
 
 ## Usage
 
