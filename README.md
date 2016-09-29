@@ -102,8 +102,7 @@ You can install the missing ones using `pip` ([link][pip]).
 ## Usage
 
 ```
-usage: srt-transform.py [-h]
-    --SW START_WRONG --SR START_RIGHT --EW END_WRONG --ER END_RIGHT INPUT OUTPUT
+usage: srt-transform.py [-h] [PARAMS] INPUT OUTPUT
 
 positional arguments:
   INPUT                 input srt file
@@ -111,6 +110,8 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
+
+required arguments:
   --SW START_WRONG, --start-wrong START_WRONG
   --SR START_RIGHT, --start-right START_RIGHT
   --EW END_WRONG, --end-wrong END_WRONG

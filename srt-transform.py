@@ -113,15 +113,18 @@ class SrtTransformer(object):
 
 if __name__ == '__main__':
 
-    ap = argparse.ArgumentParser(epilog=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("input", action="store", type=str, metavar='INPUT', help="input srt file")
-    ap.add_argument("output", action="store", type=str, metavar='OUTPUT', help="output srt file")
-    ap.add_argument("--SW", "--start-wrong", action="store", dest="start_wrong", required=True)
-    ap.add_argument("--SR", "--start-right", action="store", dest="start_right", required=True)
-    ap.add_argument("--EW", "--end-wrong", action="store", dest="end_wrong", required=True)
-    ap.add_argument("--ER", "--end-right", action="store", dest="end_right", required=True)
+    usage = "srt-transform.py [-h] [PARAMS] INPUT OUTPUT"
+    parser = argparse.ArgumentParser(usage=usage, epilog=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("input", action="store", type=str, metavar='INPUT', help="input srt file")
+    parser.add_argument("output", action="store", type=str, metavar='OUTPUT', help="output srt file")
 
-    args = ap.parse_args()
+    required = parser.add_argument_group('required arguments')
+    required.add_argument("--SW", "--start-wrong", action="store", dest="start_wrong", required=True)
+    required.add_argument("--SR", "--start-right", action="store", dest="start_right", required=True)
+    required.add_argument("--EW", "--end-wrong", action="store", dest="end_wrong", required=True)
+    required.add_argument("--ER", "--end-right", action="store", dest="end_right", required=True)
+
+    args = parser.parse_args()
 
     s = SrtTransformer(args.input)
 
