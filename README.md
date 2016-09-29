@@ -95,7 +95,7 @@ srt-transform.py --start-right 00:03:25,730 --start-wrong 00:03:35,481 --end-rig
 
 ## Requirements
 
-This indicator requires the following python modules: `os`, `sys`, `re`,
+This program requires the following python modules: `os`, `sys`, `re`,
 `argparse`.
 You can install the missing ones using `pip` ([link][pip]).
 
