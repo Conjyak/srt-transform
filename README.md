@@ -132,4 +132,4 @@ If you like this application, you can [share it][support_share],
 
 [support_share]:  https://www.addtoany.com/share/#url=github.com/antoniocoratelli/srt-transform
 [support_star]:   https://github.com/antoniocoratelli/srt-transform/stargazers
-[support_paypal]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YFBTBS8WWDTZS
+[support_paypal]: https://paypal.me/antoniocoratelli
