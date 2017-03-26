@@ -84,9 +84,9 @@ Take care, you two.
     - `--start-wrong 00:03:35,481`
     - `--end-wrong 01:59:02,006`
 
-- Let's put it together! Open a bash shell and write:
+- Let's put it together! Open a bash shell, `cd` to the path where you have installed the program, and write:
 ```
-srt-transform.py --start-right 00:03:25,730 --start-wrong 00:03:35,481 --end-right 01:55:36,458 --end-wrong 01:59:02,006 english.srt english-ok.srt
+./srt-transform.py --start-right 00:03:25,730 --start-wrong 00:03:35,481 --end-right 01:55:36,458 --end-wrong 01:59:02,006 english.srt english-ok.srt
 ```
 
 - Press enter, wait a *parsec* and enjoy your new `english-ok.srt`.
