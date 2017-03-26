@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 '''
 Copyright (c) 2016, Antonio Coratelli.
@@ -9,6 +9,7 @@ import os
 import sys
 import argparse
 import re
+from chardet.universaldetector import UniversalDetector
 
 
 class Timestamp(object):
@@ -23,7 +24,7 @@ class Timestamp(object):
         self.time = float(seconds)
 
     def from_timestamp(self, timestamp):
-        t = map(int, re.split(r"[:,.]", timestamp))
+        t = list(map(int, re.split(r"[:,.]", timestamp)))
         seconds = t[0] * 3600.0 + t[1] * 60.0 + t[2] + t[3] / 1000.0
         self.from_seconds(seconds)
 
@@ -88,8 +89,17 @@ class SrtTransformer(object):
         self.load_file(srt_in_path)
 
     def load_file(self, filename):
-        with open(filename, 'r') as f:
+        self.get_file_encoding(filename)
+        with open(filename, 'r', encoding=self.encoding, errors='ignore') as f:
             self.srt_in = f.read()
+
+    def get_file_encoding(self, filename):
+        detector = UniversalDetector()
+        for line in open(filename, 'rb'):
+            detector.feed(line)
+            if detector.done: break
+        detector.close()
+        self.encoding = detector.result['encoding']
 
     def transform(self, trasformation):
         self.srt_out = ''
@@ -107,7 +117,7 @@ class SrtTransformer(object):
             self.srt_out += "%s\r\n" % line
 
     def save_file(self, filename):
-        with open(filename, 'w') as f:
+        with open(filename, 'w', encoding=self.encoding) as f:
             f.write(self.srt_out)
 
 

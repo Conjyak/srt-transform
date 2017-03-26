@@ -94,7 +94,7 @@ srt-transform.py --start-right 00:03:25,730 --start-wrong 00:03:35,481 --end-rig
 ## Install
 
 ```
-$ sudo apt-get install python3 python3-pip && pip3 install --user --upgrade pip argparse
+$ sudo apt-get install python3 python3-pip && pip3 install --user --upgrade pip argparse chardet
 $ git clone https://github.com/antoniocoratelli/srt-transform.git
 ```
 
