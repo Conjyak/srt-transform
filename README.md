@@ -2,13 +2,11 @@
 
 Shift and stretch a '.srt' subtitle file using a linear transform.
 
-Suppose you have an `italian.srt` subtitle file, correctly synced with the
-audio of the movie you are watching, but you have an `english.srt` file that
-is out of sync. With `srt-transform.py` you can fix timestamps of the latter.
-
-You just have to find two correspondence between sentences in subtitles.
-Better results are obtained when you choose a sentence at the beginning of the
-movie, and one at the very end.
+Suppose you have an `italian.srt` subtitle file, correctly synced with the audio of the movie you are watching,
+but you have an `english.srt` file that is out of sync; with `srt-transform.py` you can fix timestamps of the second
+one: you only need to find two couples of corresponding sentences in the subtitle files.
+Best results are obtained choosing the first couple of sentences at the beginning of the movie, and
+the second couple at the very end.
 
 ## Tutorial
 
@@ -93,33 +91,16 @@ srt-transform.py --start-right 00:03:25,730 --start-wrong 00:03:35,481 --end-rig
 
 - Press enter, wait a *parsec* and enjoy your new `english-ok.srt`.
 
-## Requirements
+## Install
 
-This program requires the following python modules: `os`, `sys`, `re`,
-`argparse`.
-You can install the missing ones using `pip` ([link][pip]).
+```
+$ sudo apt-get install python3 python3-pip && pip3 install --user --upgrade pip argparse
+$ git clone https://github.com/antoniocoratelli/srt-transform.git
+```
 
 ## Usage
 
-```
-usage: srt-transform.py [-h] [PARAMS] INPUT OUTPUT
-
-positional arguments:
-  INPUT                 input srt file
-  OUTPUT                output srt file
-
-optional arguments:
-  -h, --help            show this help message and exit
-
-required arguments:
-  --SW START_WRONG, --start-wrong START_WRONG
-  --SR START_RIGHT, --start-right START_RIGHT
-  --EW END_WRONG, --end-wrong END_WRONG
-  --ER END_RIGHT, --end-right END_RIGHT
-
-Copyright (c) 2016, Antonio Coratelli.
-Released under BSD 3-Clause License. See 'LICENSE' file.
-```
+See `./srt-transform.py -h`.
 
 ## Support
 
@@ -127,8 +108,6 @@ If you like this application, you can [share it][support_share],
 [buy me a coffe][support_paypal], or just say thanks adding a
 [star][support_star] :)
 
-
-[pip]: https://wiki.python.org/moin/CheeseShopTutorial#Installing_Distributions
 
 [support_share]:  https://www.addtoany.com/share/#url=github.com/antoniocoratelli/srt-transform
 [support_star]:   https://github.com/antoniocoratelli/srt-transform/stargazers
