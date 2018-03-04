@@ -2,6 +2,12 @@
 
 Shift and stretch a '.srt' subtitle file using a linear transform.
 
+> This project is hosted on [GitLab][gl-link] and mirrored on [GitHub][gh-link].
+> Please open *Issues* and *Merge Requests* on GitLab.
+
+[gl-link]: https://gitlab.com/antoniocoratelli/srt-transform
+[gh-link]: https://github.com/antoniocoratelli/srt-transform
+
 Suppose you have an `italian.srt` subtitle file, correctly synced with the audio of the movie you are watching,
 but you have an `english.srt` file that is out of sync; with `srt-transform.py` you can fix timestamps of the second
 one: you only need to find two couples of corresponding sentences in the subtitle files.
@@ -11,6 +17,7 @@ the second couple at the very end.
 ## Tutorial
 
 - Open `italian.srt` -- the correctly synced subtitle:
+
 ```
 1
 00:03:23,850 --> 00:03:25,602
